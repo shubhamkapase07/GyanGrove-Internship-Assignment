@@ -1,0 +1,507 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+
+.logo {
+  flex: 1;
+}
+
+.book-us-now {
+  padding-left: 50px;
+  padding-right: 0px;
+  color: #CF2D2D;
+  font-weight: bold;
+}
+
+.categories,
+.search-box,
+.favorites,
+.sign-in {
+  margin-left: 10px;
+}
+
+.categories-button,
+.search-button,
+.sign-in-button {
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.categories-button {
+  height: 35px;
+  background-color: #000000;
+  padding: 10px;
+}
+
+.categories-button .fas {
+  margin-right: 5px;
+}
+
+.search-button {
+  background-color: transparent;
+  padding: 0;
+}
+
+.search-button i {
+  margin-right: 5px;
+}
+
+.search-box {
+  display: flex;
+  position: relative;
+}
+
+.search-box input {
+  width: 750px;
+  /* max-width: 300px; */
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+.search-box .search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box .search-button i {
+  color: grey;
+  margin-left: 5px;
+}
+
+.favorites {
+  padding-left: 100px;
+  color: #666666;
+}
+
+.favorites-text i {
+  margin-right: 5px;
+}
+
+.sign-in-button {
+  background-color: #ffffff;
+  color: #666666;
+  border: 1px solid #666666;
+  padding: 10px 25px;
+}
+
+.text-buttons {
+  text-align: center;
+  margin: 2px 2px;
+  padding: 2px 2px;
+}
+
+.button-container {
+  margin: 0px 40px;
+  padding: 0px 25px;
+}
+
+.text-button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text-button {
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.text-button:hover {
+  text-decoration: underline;
+}
+
+.location {
+  color: #666666;
+  padding-left: 50px;
+  margin-right: 200px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.recommended-show {
+  margin-left: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.recommended-text {
+  color: #ffffff;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.recommended-show i {
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+.see-all-container {
+  position: absolute;
+  bottom: 250px;
+  right: 20px;
+  margin-right: 150px;
+  z-index: 1;
+}
+
+.see-all-button {
+  border: none;
+  background: none;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.see-all-button:hover {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  display: inline-block;
+  margin-right: 25px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.overlay-text p {
+  margin: 5px 0;
+}
+
+.image-container {
+  position: relative;
+}
+
+.recommended-show {
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.recommended-show i {
+  margin-right: 5px;
+}
+
+
+.container-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Additional styles for responsiveness */
+
+.upcoming-events {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.upcoming-events h2 {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.event-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+}
+
+/* Hide the scrollbar */
+.event-container::-webkit-scrollbar {
+  display: none;
+}
+
+.event-card {
+  padding: 20px;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Date styling */
+.date2 {
+  position: absolute;
+  bottom: 118px;
+  left: 20px;
+  color: white;
+  font-size: 16px;
+  padding: 10px 243px 18px 18px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 7px 7px;
+  z-index: 1;
+}
+
+.date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.event-info {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.event-info p {
+  margin: 5px 0;
+}
+
+.event-info p.date {
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .logo {
+    flex: 0 0 auto;
+    padding: 10px;
+  }
+
+  .book-us-now {
+    padding-left: 10px;
+    padding-right: 0;
+    font-size: 16px;
+  }
+
+  .categories,
+  .search-box,
+  .favorites,
+  .sign-in {
+    margin-left: 5px;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+  }
+
+  .text-buttons {
+    margin: 0;
+    padding: 0;
+  }
+
+  .button-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .text-button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .location {
+    padding-left: 10px;
+    margin-right: 50px;
+  }
+
+  .recommended-show {
+    margin-left: 10px;
+    left: auto;
+    right: 10px;
+  }
+
+  .see-all-container {
+    bottom: 150px;
+    right: 10px;
+    margin-right: 0;
+  }
+
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .upcoming-events {
+    margin: 10px;
+  }
+
+  .event-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .event-card {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .date2 {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    z-index: 1;
+  }
+}
+/* Add this CSS within your existing media query for smartphones */
+
+@media screen and (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 24px; /* Adjust font size for h1 element */
+  }
+
+  .banner-text p {
+    font-size: 14px; /* Adjust font size for p element */
+  }
+}
+/* Add this CSS within your existing media query for smartphones */
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(100% - 20px); /* Adjust width to fit within the screen */
+    max-width: 300px; /* Limit the maximum width */
+    /* Center the card, add some bottom margin, and push it down */
+    
+    position: relative; /* Ensure relative positioning */
+    z-index: 2; /* Ensure card is above other content */
+  }
+}
+
+
+/* Add this CSS within your existing media query for smartphones */
+
+@media screen and (max-width: 768px) {
+  .event-card {
+    width: calc(100% - 20px); /* Adjust width to fit within the screen */
+    max-width: 300px; /* Limit the maximum width */
+    margin: 0 auto 20px; /* Center the card and add some bottom margin */
+  }
+
+  .event-info p.date2 {
+    display: none; /* Hide the date2 paragraph to avoid overlapping */
+  }
+}
+

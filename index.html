@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Website</title>
+  <!-- Include Font Awesome from cdnjs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Other meta tags and stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <span class="book-us-now">BookUsNow</span><br>
+    </div>
+    <div class="categories">
+      <button class="categories-button"><i class="fas fa-bars"></i> Categories</button>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <button class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="favorites">
+      <span class="favorites-text"><i class="fas fa-heart"></i> Favorites</span>
+    </div>
+    <div class="sign-in">
+      <button class="sign-in-button">Sign in</button>
+    </div>
+  </nav>
+  <nav class="text-buttons">
+    <span class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, India ></span>
+    <div class="button-container">
+      <button class="text-button">Live Shows</button>
+      <button class="text-button">Streams</button>
+      <button class="text-button">Movies</button>
+      <button class="text-button">Plays</button>
+      <button class="text-button">Events</button>
+      <button class="text-button">Sports</button>
+      <button class="text-button">Activities</button>
+    </div>
+  </nav>
+  <div class="image-container">
+    <img src="images/Banner.svg" alt="Banner Image">
+    <div class="banner-text">
+      <h1>Discover Exciting Events Happening<br>Near You - Stay Tuned for Updates!</h1>
+      <p>Find out about the latest events in your area and never miss out on the fun!</p>
+    </div>
+    <div class="recommended-show">
+      <span class="recommended-text">Recommended Shows <i class="fas fa-arrow-circle-right"></i></span>
+      <div class="container-wrapper">
+        <div class="container" id="container"></div>
+      </div>
+    </div>
+    <div class="see-all-container">
+      <button class="see-all-button">See All</button>
+    </div>
+  </div>
+  
+  <div class="upcoming-events">
+    <h2>Upcoming Events <i class="fas fa-arrow-circle-right"></i></h2>
+    <div class="event-container" id="upcoming-events-container">
+      <!-- Cards will be dynamically added here -->
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="upcoming-events.js"></script>
+</body>
+</html>
